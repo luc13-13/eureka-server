@@ -1,8 +1,8 @@
-package com.lc.projectname;
+package com.lc.eureka.server;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
  * @author: lucheng
@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @version: 1.0
  */
 @SpringBootApplication
-@MapperScan("mapper/*.xml")
+@EnableEurekaServer
 public class Bootstrap {
     public static void main(String[] args) {
         SpringApplication.run(Bootstrap.class, args);

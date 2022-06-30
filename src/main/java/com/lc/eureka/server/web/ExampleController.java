@@ -1,4 +1,4 @@
-package com.lc.projectname.web;
+package com.lc.eureka.server.web;
 
 /**
  * @author: lucheng

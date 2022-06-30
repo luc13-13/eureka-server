@@ -1,0 +1,21 @@
+server:
+  port: 8889
+spring:
+  application:
+    name: eureka-server
+  cloud:
+    inetutils:
+      ignored-interfaces: 'VMware Virtual Ethernet Adapter for VMnet1, VMware Virtual Ethernet Adapter for VMnet8'
+
+eureka:
+  instance:
+    hostname: localhost #部署eureka注册中心的IP
+  client:
+    register-with-eureka: false #该服务为注册中心，用于发现服务，不需要将自身暴露于注册中心
+    fetch-registry: false # 表示不在注册中心中检索服务，只维护服务实例
+    service-url: # 其它服务的注册地址和发现地址
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    root: debug
