@@ -14,14 +14,18 @@
 	<name>eureka-server</name>
 	<packaging>jar</packaging>
     <distributionManagement>
+<!--        <repository>-->
+<!--            <id>maven-releases</id>-->
+<!--            <url>http://192.168.223.128:8081/repository/maven-releases/</url>-->
+<!--        </repository>-->
         <repository>
-            <id>maven-releases</id>
-            <url>http://192.168.223.128:8081/repository/maven-releases/</url>
+            <id>local-mvn-repo</id>
+            <url>/Users/luc13/Desktop/tools/maven/repository</url>
         </repository>
-        <snapshotRepository>
-            <id>maven-snapshots</id>
-            <url>http://192.168.223.128:8081/repository/maven-snapshots/</url>
-        </snapshotRepository>
+<!--        <snapshotRepository>-->
+<!--            <id>maven-snapshots</id>-->
+<!--            <url>http://192.168.223.128:8081/repository/maven-snapshots/</url>-->
+<!--        </snapshotRepository>-->
     </distributionManagement>
 
 	<dependencies>
@@ -29,6 +33,7 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <version>3.1.0</version>
         </dependency>
 
         <dependency>

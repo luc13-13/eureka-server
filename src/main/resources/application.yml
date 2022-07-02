@@ -18,4 +18,4 @@ eureka:
 logging:
   config: classpath:logback-spring.xml
   level:
-    root: debug
+    root: info
