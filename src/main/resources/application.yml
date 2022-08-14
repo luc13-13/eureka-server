@@ -15,7 +15,10 @@ eureka:
     fetch-registry: false # 表示不在注册中心中检索服务，只维护服务实例
     service-url: # 其它服务的注册地址和发现地址
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
 logging:
-  config: classpath:logback-spring.xml
+  config: classpath:./logback-spring.xml
   level:
     root: info
+  file:
+    path: ./${spring.application.name}/logs
